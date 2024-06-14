@@ -4,15 +4,22 @@ import PokemonCard from './PokemonCard';
 import fire from '../data/fire.json';
 import ice from '../data/ice.json';
 import { formatPokemonData } from "../utils/pokemon-helper";
+import Loader from './Loader';
 
 const PokemonsContainer = ({ type }) => {
+    const [loading, setLoading] = useState(false);
     const [pokemons, setPokemons] = useState([]);
 
     useEffect(() => {
         load()
     }, [type])
 
+    useEffect(() => {
+        setLoading(false)
+    }, [pokemons])
+
     const load = async () => {
+        setLoading(true);
         let pokemonList = fire.pokemon;
         if (type == 'ice')
             pokemonList = ice.pokemon
@@ -31,9 +38,16 @@ const PokemonsContainer = ({ type }) => {
     }
 
     return (
-        <div className='pokemons-container'>
-            {pokemons.map((pokemon) => <PokemonCard key={pokemon.id} pokemon={pokemon} />)}
-        </div>
+        <>
+            {
+                loading ?
+                    <Loader />
+                    :
+                    <div className='pokemons-container'>
+                        {pokemons.map((pokemon) => <PokemonCard key={pokemon.id} pokemon={pokemon} />)}
+                    </div>
+            }
+        </>
     );
 };
 
