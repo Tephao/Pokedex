@@ -1,0 +1,39 @@
+{
+    "pokemon": [
+        {
+            "pokemon": {
+                "name": "dewgong",
+                "url": "https://pokeapi.co/api/v2/pokemon/87/"
+            },
+            "slot": 2
+        },
+        {
+            "pokemon": {
+                "name": "cloyster",
+                "url": "https://pokeapi.co/api/v2/pokemon/91/"
+            },
+            "slot": 2
+        },
+        {
+            "pokemon": {
+                "name": "jynx",
+                "url": "https://pokeapi.co/api/v2/pokemon/124/"
+            },
+            "slot": 1
+        },
+        {
+            "pokemon": {
+                "name": "lapras",
+                "url": "https://pokeapi.co/api/v2/pokemon/131/"
+            },
+            "slot": 2
+        },
+        {
+            "pokemon": {
+                "name": "articuno",
+                "url": "https://pokeapi.co/api/v2/pokemon/144/"
+            },
+            "slot": 1
+        }
+    ]
+}

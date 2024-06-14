@@ -1,9 +1,19 @@
-import React from 'react';
-import useTypes from '../hooks/useTypes';
+import React, { useState, useEffect } from 'react';
 import { getTypeIconSrc } from '../utils/pokemon-helper';
 
+import { results } from '../data/type.json';
+
 const TypesBar = ({ toggleType }) => {
-    const types = useTypes();
+    const [types, setTypes] = useState([]);
+
+    useEffect(() => {
+        load()
+    }, [])
+
+    const load = async () => {
+        // const { results } = await apiFetch('/type');
+        setTypes(results)
+    }
 
     return (
         <nav className='types-bar'>
@@ -13,11 +23,11 @@ const TypesBar = ({ toggleType }) => {
 
                     return (
                         <a
-                            key={ name }
-                            className={ name }
-                            onClick={ () => toggleType(name) }
+                            key={name}
+                            className={name}
+                            onClick={() => toggleType(name)}
                         >
-                            <img src={ typeImg } alt={ name } />
+                            <img src={typeImg} alt={name} />
                         </a>
                     );
                 })
