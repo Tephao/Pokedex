@@ -7,7 +7,7 @@ import { formatPokemonData } from "../utils/pokemon-helper";
 import Loader from './Loader';
 
 const PokemonsContainer = ({ type }) => {
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
     const [pokemons, setPokemons] = useState([]);
 
     useEffect(() => {
