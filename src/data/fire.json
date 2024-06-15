@@ -48,6 +48,41 @@
                 "url": "https://pokeapi.co/api/v2/pokemon/59/"
             },
             "slot": 1
+        },
+        {
+            "pokemon": {
+                "name": "ponyta",
+                "url": "https://pokeapi.co/api/v2/pokemon/77/"
+            },
+            "slot": 1
+        },
+        {
+            "pokemon": {
+                "name": "rapidash",
+                "url": "https://pokeapi.co/api/v2/pokemon/78/"
+            },
+            "slot": 1
+        },
+        {
+            "pokemon": {
+                "name": "magmar",
+                "url": "https://pokeapi.co/api/v2/pokemon/126/"
+            },
+            "slot": 1
+        },
+        {
+            "pokemon": {
+                "name": "flareon",
+                "url": "https://pokeapi.co/api/v2/pokemon/136/"
+            },
+            "slot": 1
+        },
+        {
+            "pokemon": {
+                "name": "moltres",
+                "url": "https://pokeapi.co/api/v2/pokemon/146/"
+            },
+            "slot": 1
         }
     ]
 }
